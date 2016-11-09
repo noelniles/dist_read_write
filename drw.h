@@ -12,7 +12,7 @@ void dwrite() {
  */
 }
 
-void dwrite() {
+void dread() {
     
 }
 #endif // end DRW_H
