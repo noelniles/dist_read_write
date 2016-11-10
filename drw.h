@@ -1,5 +1,13 @@
 #ifndef DRW_H
 #define DRW_H
+
+
+typedef struct {
+    int id;
+    int *clock;
+} process;
+
+
 void dwrite() {
 /* If PCj wants does not want access send OK_TO_WRITE message to PCi. */
 
