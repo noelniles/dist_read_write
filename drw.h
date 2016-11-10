@@ -1,12 +1,21 @@
 #ifndef DRW_H
 #define DRW_H
 
-
+typedef struct vector_clock;
 typedef struct {
     int id;
     int *clock;
-} process;
+    vector_clock() {
+        char *fn = (char*)id;
+        FILE *fp = fopen(fn, "a");
+    }
 
+    void done() {
+        clock[id] = 0;
+    }
+} vector_clock;
+
+typedef enum {WRITE, OK_TO_WRITE, READING} message;
 
 void dwrite() {
 /* If PCj wants does not want access send OK_TO_WRITE message to PCi. */
